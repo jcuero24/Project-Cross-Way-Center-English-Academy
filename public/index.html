@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cross Way Center - Academia de Inglés</title>
+
+    <!-- Actualiza la versión según sea necesario -->
+    <script defer src="/__/firebase/10.14.1/firebase-app-compat.js"></script>
+    <script defer src="/__/firebase/10.14.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.14.1/firebase-functions-compat.js"></script>
+    <!-- Incluye otros servicios de Firebase solo si los necesitas -->
+
+    <!-- Inicializa el SDK de Firebase -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      header { background-color: #039be5; color: white; padding: 10px 0; text-align: center; }
+      #main-content { max-width: 900px; margin: 20px auto; padding: 20px; background: white; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      .section { margin-bottom: 20px; }
+      .contact-info { background: #FFA100; color: white; padding: 10px; text-align: center; border-radius: 5px; }
+      .schedule { margin-top: 15px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Academia de Inglés Cross Way Center</h1>
+      <p>Fundada en 1986 con licencia de funcionamiento 310-59.1104</p>
+    </header>
+
+    <div id="main-content">
+      <div class="section">
+        <h2>Sobre Nosotros</h2>
+        <p>Ofrecemos un programa académico en inglés autorizado por la resolución 310-59.1105 de la Secretaría de Educación, que comprende 12 niveles.</p>
+        <p>Inscripciones abiertas todo el año en nuestra sede ubicada en Tuluá-Valle, Calle 34#20-41, barrio Sajonia, frente al lago Chilicote.</p>
+      </div>
+
+      <div class="section">
+        <h2>Horarios y Modalidad</h2>
+        <div class="schedule">
+          <h3>De Lunes a Jueves</h3>
+          <ul>
+            <li>Mañana: 7:30 - 9:00, 9:00 - 10:30, 10:30 - 12:00</li>
+            <li>Tarde: 4:00 - 5:30, 5:30 - 7:00</li>
+            <li>Noche: 7:00 - 8:30</li>
+          </ul>
+          <h3>Sábados</h3>
+          <ul>
+            <li>8:30 a.m. - 11:45 a.m.</li>
+          </ul>
+          <p>Modalidad presencial: Diurna, nocturna y de fin de semana.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Costos</h2>
+        <p>Matrícula: $100.000</p>
+        <p>Costo por nivel: $240.000</p>
+        <p>Clases personalizadas: $35.000 por hora, coordinadas según la disponibilidad del estudiante.</p>
+      </div>
+
+      <div class="contact-info">
+        <h3>Contacto</h3>
+        <p>Teléfono: 3173798422</p>
+        <p>¡Te esperamos!</p>
+      </div>
+    </div>
+
+    <p id="load">Cargando el SDK de Firebase&hellip;</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'functions'].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
