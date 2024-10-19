@@ -9,7 +9,7 @@ import { HomeComponent } from "./components/home/home.component";
   standalone: true,
   imports: [RouterOutlet, NivelesComponent, ProgramasComponent, HomeComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './styles.css'
 
 })
 export class AppComponent {
