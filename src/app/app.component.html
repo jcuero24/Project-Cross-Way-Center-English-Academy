@@ -1,79 +1,80 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cross Way Center - Academia de Inglés</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Encabezado -->
-    <header>
-        <div class="logo">
-            <img
-            src="./img/logo cwc.jpeg"
-            alt="Cross Way Center logo"
-            class="img-element z-index"
-          />
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#acerca-de">Acerca de</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <div class="logo-container">
+    <img src="./img/logo cwc.png" alt="Logo Cross Way Center" class="logo">
+    <h1>Academia Cross Way Center</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a routerLink="/">Inicio</a></li>
+      <li><a routerLink="/programas">Programas y Niveles</a></li>
+      <li><a routerLink="/profesores">Profesores</a></li>
+      <li><a routerLink="/testimonios">Testimonios</a></li>
+      <li><a routerLink="/acerca">Acerca de</a></li>
+      <li><a routerLink="/inscripcion">Inscripción</a></li>
+      <li><a routerLink="/contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- Contenido principal -->
+<main>
+  <div class="cards">
+    <div class="card" data-card="mision">
+      <div class="card-content z-index">
+        <img src="./img/design-icon.svg" class="icon" alt="icono ui/ux" />
+        <h3 class="title-sm">Misión</h3>
+        <p class="text">
+          Nuestra Misión es proporcionar a los estudiantes las herramientas necesarias para el óptimo aprendizaje del idioma Inglés, que le permita ser utilizado en los diferentes contextos de la vida cotidiana poniendo en práctica las cuatro habilidades básicas del lenguaje (hablar, escuchar, leer y escribir).
+        </p>
+      </div>
+    </div>
 
-    <!-- Sección de Inicio -->
-    <section id="inicio">
-        <h1>Cross Way Center</h1>
-        <p>Academia de inglés con más de 35 años de experiencia en la enseñanza de idiomas en Tuluá, Valle del Cauca.</p>
-    </section>
+    <div class="card" data-card="vision">
+      <div class="card-content z-index">
+        <img src="./img/code-icon.svg" class="icon" alt="icono desarrollo web" />
+        <h3 class="title-sm">Visión</h3>
+        <p class="text">
+         En el año 2028 nuestra Institución brindará un servicio de Enseñanza de inglés de alta calidad quedando posicionada entre las mejores instituciones del Valle del Cauca y ofertará de manera presencial y virtual en diferentes regiones de Colombia.
+        </p>
+      </div>
+    </div>
 
-    <!-- Sección de Servicios -->
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <p>Ofrecemos cursos de inglés de alta calidad, estructurados en 12 niveles para adaptarse a las necesidades de aprendizaje de nuestros estudiantes. Cada nivel tiene una duración de 4 semanas (lunes a jueves) o 8 sábados.</p>
-        <ul>
-            <li>Clases grupales presenciales.</li>
-            <li>Clases personalizadas a domicilio o en la academia.</li>
-            <li>Horarios flexibles: diurnos, nocturnos y fines de semana.</li>
-        </ul>
-    </section>
+    <div class="card" data-card="politica">
+      <div class="card-content z-index">
+        <img src="./img/app-icon.svg" class="icon" alt="icono app" />
+        <h3 class="title-sm">Política de Calidad</h3>
+        <p class="text">
+         El Instituto de Formación para el Trabajo Cross Way Center, asume por objeto la enseñanza del idioma Inglés, en el ámbito escolar, universitario y de la sociedad en general, proporcionando a sus estudiantes los conocimientos lingüísticos imprescindibles para obtener una mejor formación personal, académica y profesional, que genere la satisfacción completa de sus necesidades, basándose en la mejora continua de los procesos que conforma el Sistema de Gestión de Calidad, teniendo como soporte los valores definidos en la misión, visión y las directrices de la NTC 5555 y 5580.
+        </p>
+      </div>
+    </div>
+  </div>
 
-    <!-- Sección Acerca de -->
-    <section id="acerca-de">
-        <h2>Acerca de la Academia</h2>
-        <p>Cross Way Center fue fundada en 1986 y ha sido un referente en la enseñanza del inglés en la región. Con licencia de funcionamiento 310-59.1104, la academia ofrece un programa autorizado de 12 niveles, diseñado para proporcionar una formación completa en el idioma. Nuestros métodos se enfocan en la práctica comunicativa y en el desarrollo de habilidades lingüísticas en contextos reales.</p>
-        <p>Nuestra sede está ubicada en el barrio Sajonia, Calle 34#20-41, en Tuluá, Valle del Cauca.</p>
-    </section>
+  <!-- Componente que representa a la sección actual -->
+  <router-outlet></router-outlet>
 
-    <!-- Sección de Testimonios -->
-    <section id="testimonios">
-        <h2>Testimonios</h2>
-        <div class="testimonio">
-            <p>"Cross Way Center me ayudó a alcanzar el nivel de inglés que necesitaba para mi trabajo. Los profesores son excelentes y el ambiente es muy acogedor."</p>
-            <cite>- Estudiante satisfecho</cite>
-        </div>
-        <div class="testimonio">
-            <p>"Los horarios flexibles me permitieron estudiar mientras trabajaba. ¡Recomiendo esta academia a todos mis amigos!"</p>
-            <cite>- Exalumno</cite>
-        </div>
-    </section>
+ 
+</main>
 
-    <!-- Sección de Contacto -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Para más información, puedes visitarnos en nuestra sede o contactarnos al teléfono 3173798422.</p>
-    </section>
-
-    <!-- Pie de página -->
-    <footer>
-        <p>© Copyright 2024 - Cross Way Center. Todos los derechos reservados.</p>
-    </footer>
-
-</body>
-</html>
+<!-- Pie de página -->
+<footer>
+  <div class="followme-wrap">
+    <div class="followme">
+      <h3>Síguenos</h3>
+      <span class="footer-line"></span>
+      <div class="social-media">
+        <a href="https://www.facebook.com/CrossWayCenter.Co">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/cross_way_center?igsh=MTI0d3Zjdzk5MjNhNQ==">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+    <div class="back-btn-wrap">
+      <a href="#" class="back-btn">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+    </div>
+  </div>
+  <p>© Copyright 2024 | Cross Way Center. Todos los derechos reservados.</p>
+</footer>

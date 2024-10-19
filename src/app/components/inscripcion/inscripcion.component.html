@@ -1,0 +1,35 @@
+<div class="inscripcion-container">
+    <h2>Formulario de Inscripción</h2>
+    
+    <form (ngSubmit)="onSubmit()" #inscripcionForm="ngForm">
+      <div>
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" required minlength="2" [(ngModel)]="inscripcion.nombre" name="nombre" />
+      </div>
+      
+      <div>
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" required [(ngModel)]="inscripcion.correo" name="correo" />
+      </div>
+  
+      <div>
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" required [(ngModel)]="inscripcion.telefono" name="telefono" />
+      </div>
+  
+      <div>
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" required [(ngModel)]="inscripcion.fechaNacimiento" name="fechaNacimiento" />
+      </div>
+  
+      <div>
+        <label for="curso">Curso Seleccionado:</label>
+        <select id="curso" required [(ngModel)]="inscripcion.curso" name="curso">
+          <option *ngFor="let curso of cursos" [value]="curso">{{ curso }}</option>
+        </select>
+      </div>
+  
+      <button type="submit" [disabled]="!inscripcionForm.form.valid">Inscribirse</button>
+    </form>
+  </div>
+  

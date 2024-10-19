@@ -1,0 +1,106 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Color de fondo */
+    color: #333; /* Color del texto */
+  }
+  
+  /* Estilos para el header */
+  header {
+    background-color: #007bff; /* Color del fondo del header */
+    color: white; /* Color del texto del header */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar el texto */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+  }
+  
+  .logo {
+    width: 100px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+    margin-right: 20px; /* Espaciado entre el logo y el título */
+  }
+  
+  /* Estilos para el menú de navegación */
+  nav {
+    margin-top: 15px;
+  }
+  
+  nav ul {
+    list-style-type: none; /* Eliminar viñetas */
+    padding: 0; /* Eliminar padding */
+  }
+  
+  nav ul li {
+    display: inline; /* Mostrar elementos en línea */
+    margin: 0 15px; /* Espaciado entre los elementos */
+  }
+  
+  nav ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+  }
+  
+  /* Estilos para el contenido principal */
+  main {
+    padding: 20px;
+  }
+  
+  /* Estilos para las tarjetas */
+  .cards {
+    display: flex;
+    justify-content: space-around; /* Espaciado entre tarjetas */
+    flex-wrap: wrap; /* Ajustar tarjetas al tamaño de la pantalla */
+  }
+  
+  .card {
+    background-color: white; /* Color de fondo de la tarjeta */
+    border: 1px solid #ccc; /* Borde de la tarjeta */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 15px; /* Espaciado interno */
+    margin: 10px; /* Espaciado externo */
+    width: 300px; /* Ancho de la tarjeta */
+  }
+  
+  .card-content {
+    text-align: center; /* Centrar el texto dentro de la tarjeta */
+  }
+  
+  /* Estilos para el footer */
+  footer {
+    background-color: #007bff; /* Color de fondo del footer */
+    color: white; /* Color del texto del footer */
+    text-align: center; /* Centrar el texto */
+    padding: 10px 0; /* Espaciado */
+    position: relative; /* Para fijar el pie al fondo */
+    bottom: 0; /* Fijar al fondo */
+    width: 100%; /* Ancho completo */
+  }
+  
+  .followme {
+    margin-bottom: 10px; /* Espaciado en la parte inferior */
+  }
+  
+  .social-media a {
+    color: white; /* Color de los íconos de redes sociales */
+    margin: 0 10px; /* Espaciado entre íconos */
+  }
+  
+  .back-btn {
+    background-color: #007bff; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
+  

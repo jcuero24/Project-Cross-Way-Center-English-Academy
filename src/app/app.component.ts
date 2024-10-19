@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NivelesComponent } from "./components/niveles/niveles.component";
-import { ProgramasComponent } from "./components/programas/programas.component";
-import { HomeComponent } from "./components/home/home.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NivelesComponent, ProgramasComponent, HomeComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './styles.css'
-
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'cross-way-center-academy';

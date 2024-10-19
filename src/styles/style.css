@@ -1,0 +1,814 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Variables */
+
+:root {
+  --dark-one: #333;
+  --dark-two: #9c9797;
+  --main-color: #07aec4;
+  --secondary-color: #00418b;
+  --light-one: #fff;
+  --light-two: #f9fafb;
+  --light-three: #f6f7fb;
+}
+/* Estilos generales */
+
+/*
+ Danis un margin y un padding de 0 y un box-sizing border box para 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* se utiliza para especificar el comportamiento de desplazamiento
+suave (smooth scrolling) en una página web */
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  max-width: 92rem;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+/* grid-template-columns se utiliza para definir el número y
+el tamaño de las columnas en un grid de CSS 
+
+repeat(2, 1fr): Esto indica que se deben crear dos columnas en el grid.
+1fr: Cada columna debe ocupar una fracción igual del espacio disponible
+en el contenedor. En este caso, ambas columnas serán del mismo tamaño y
+ocuparán igualmente el espacio disponible en el contenedor.
+*/
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 1.25rem;
+  color: var(--dark-two);
+  line-height: 1.6;
+}
+
+.column-1 {
+  margin-right: 1.5rem;
+}
+
+.column-2 {
+  margin-left: 1.5rem;
+}
+
+/* position: relative posiciona un elemento en relación con
+su posición original en el flujo del documento. */
+.image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.z-index {
+  position: relative;
+  z-index: 2;
+}
+
+/* position: absolute posiciona un elemento en relación con su 
+elemento padre más cercano que tiene una propiedad de posicionamiento 
+diferente a static (generalmente relative, absolute, o fixed). */
+.points {
+  opacity: 0.3;
+  position: absolute;
+}
+
+/* Cuando trabajas con diseños web y elementos que se superponen,
+overflow: hidden puede ayudar a evitar que el contenido desborde o
+se superponga incorrectamente, manteniendo todo dentro de los
+límites del contenedor */
+.section {
+  padding: 7rem 0;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  line-height: 1;
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.title:before {
+  content: attr(data-title);
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--main-color);
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.title:after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--main-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-header .text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title-sm {
+  color: var(--dark-one);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background-color: var(--main-color);
+  color: var(--light-one);
+  border-radius: 2rem;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn.small {
+  padding: 0.7rem 1.8rem;
+  font-size: 1rem;
+}
+
+.btn button {
+  border: none;
+  background-color: var(--main-color);
+}
+
+/* Fin estilos generales*/
+
+header nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: var(--light-one);
+  z-index: 50;
+  overflow: hidden;
+}
+
+nav.container{
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+}
+
+.logo a{
+  color: var(--dark-one);
+}
+
+.logo{
+  width: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.logo span{
+  color: var(--main-color);
+}
+
+.links ul{
+  display: flex;
+}
+
+.links a {
+  display: inline-block;
+  padding: 0.9rem 1.2rem;
+  color: var(--dark-one);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.links a.active {
+  background-color: var(--main-color);
+  color: var(--light-one);
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: 0.9rem 2.1rem;
+  margin-left: 1rem;
+}
+
+.links a:hover{
+  color: var(--main-color)
+}
+
+.links a.active:hover{
+  color: var(--light-one);
+  background-color: var(--light-two);
+}
+
+.hamburger-menu{
+  display: none;
+}
+
+.header-content{
+  margin-top: 6rem;
+}
+
+.header-title{
+  font-size: 3.8rem;
+  line-height: 0.8;
+  color:var(--dark-one);
+}
+
+.header-title span{
+color: var(--main-color);
+}
+
+.header-content.text{
+  margin: 2.5rem 0;
+}
+/* FIN HEADER*/
+
+
+/* Servicios */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /*Sirve para que los elementos con display flex ocupen varias lineas*/
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  min-height: 520px;
+  background-color: var(--light-three);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin: 1rem 0.8rem;
+  overflow: hidden;
+  border: solid 1px var(--dark-two);
+  border-radius: 5%;
+}
+
+.card:before {
+  content: attr(data-card);
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--main-color);
+  opacity: 0.3;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  transition: 0.3s;
+}
+
+.icon {
+  width: 90px;
+  margin-bottom: 1.7rem;
+}
+
+.card .title-sm {
+  line-height: 0.8;
+}
+
+.card .text {
+  font-size: 1.15rem;
+  margin: 1.8rem 0;
+}
+/* Fin Servicios */
+
+/* Sección de contacto */
+
+.contact {
+  position: relative;
+  width: 100%;
+}
+
+.contact:before,
+.contact:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  left: 0;
+}
+
+.contact {
+  background: url("../img/contact-bg.svg") center bottom / cover;
+}
+
+.contact-box {
+  width: 100%;
+  background-color: var(--light-one);
+  width: 100%;
+  border-radius: 45px;
+  padding: 5.5rem 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: -10%;
+}
+
+.contact-info {
+  padding-right: 2rem;
+}
+
+.contact-form {
+  padding-left: 2rem;
+}
+
+.contact-info .title:after {
+  left: 0;
+  transform: initial;
+}
+
+.information-wrap {
+  margin-top: 2rem;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+}
+
+.information:not(:last-child) {
+  margin-bottom: 1.3rem;
+}
+
+.contact-icon {
+  min-width: 67px;
+  height: 67px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: var(--light-one);
+  text-align: center;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+
+.contact-icon i {
+  line-height: 67px;
+}
+
+.info-text {
+  font-size: 1.3rem;
+  display: inline-block;
+}
+
+.contact-form .title:after {
+  display: none;
+}
+
+.contact-form .title {
+  margin: 0;
+}
+
+.contact-form .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-column-gap: 0.6rem;
+}
+
+.contact-input {
+  padding: 1.2rem 2.1rem;
+  margin: 0.6rem 0;
+  border: none;
+  outline: none;
+  background: #f3f3f3;
+  border-radius: 4rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  transition: 0.3s;
+}
+
+.contact-input::placeholder {
+  font-weight: 400;
+}
+
+.contact-input.textarea {
+  resize: none;
+  min-height: 280px;
+  border-radius: 2rem;
+}
+
+.contact-input:hover {
+  background: #ececec;
+}
+
+.contact-input:focus {
+  background: #eaeaea;
+}
+
+.contact-input .btn {
+  margin-top: 0.6rem;
+}
+
+/* Fin Sección de contacto */
+
+/* Sección Contacto WhatsApp */
+
+.hireme {
+  padding: 12rem 0;
+}
+
+.hireme .container {
+  text-align: center;
+}
+
+.hireme .title {
+  margin-bottom: 1.3rem;
+}
+
+.hireme .text {
+  max-width: 1000px;
+  margin: 0 auto 1.6rem auto;
+}
+
+/* Fin Sección Contacto WhatsApp */
+
+/* Sección de Testimonios */
+
+.testimonials {
+  background-color: var(--light-two);
+  overflow: hidden;
+}
+
+.testi-content {
+  margin-top: 6rem;
+}
+
+.reviews {
+  overflow: hidden;
+}
+
+.review {
+  position: relative;
+  padding: 2rem 1.5rem;
+}
+
+.quote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--main-color);
+  opacity: 0.04;
+  font-size: 8rem;
+}
+
+.rate {
+  display: flex;
+  font-size: 1.4rem;
+  color: #ebc000;
+  margin-bottom: 1.5rem;
+}
+
+.rate i {
+  margin-right: 0.3rem;
+}
+
+.review-text {
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.7;
+}
+
+.review-info {
+  margin-top: 2rem;
+}
+
+.review-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--dark-one);
+}
+
+.review-job {
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: #777;
+}
+
+.review-nav {
+  bottom: 2.2rem;
+  top: initial;
+  font-size: 1.8rem;
+  color: var(--main-color);
+}
+
+.swiper-button-next {
+  right: 2rem;
+  left: initial;
+}
+
+.swiper-button-prev {
+  right: 4.5rem;
+  left: initial;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+
+/* Fin Sección de Testimonios */
+
+/* Sección acerca de */ 
+.about {
+  overflow: hidden;
+}
+
+.about img {
+  max-width: 600px;
+}
+
+.about .text {
+  margin-top: 1rem;
+}
+
+.skills {
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.skill {
+  margin: 1rem 0;
+}
+
+.skill-title {
+  color: #343535;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.skill-bar {
+  width: 70%;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #00418b;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-progress {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  transition: 1s;
+}
+
+.about .column-1 {
+  position: relative;
+}
+
+.about .column-1:before {
+  content: "About";
+  position: absolute;
+  font-size: 8rem;
+  font-weight: 800;
+  color: var(--main-color);
+  opacity: 0.04;
+  top: 20px;
+  left: 0;
+  line-height: 0;
+}
+
+/* Fin Sección acerca de */
+
+ /* Sección pie de página */
+
+.footer {
+  background-color: #222;
+  padding: 6rem 0;
+}
+
+.footer .grid-4 {
+  display: grid;
+  grid-template-columns: 3.5fr 2fr 2fr 3fr;
+}
+
+.grid-4-col {
+  padding: 0 1.7rem;
+}
+
+.footer .title-sm {
+  color: #fafafa;
+  margin-bottom: 0.9rem;
+}
+
+.footer .text {
+  color: #aaa;
+}
+
+.footer-links a {
+  color: #888;
+  font-size: 1.25rem;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--main-color);
+}
+
+.footer-input-wrap {
+  display: grid;
+  grid-template-columns: auto 50px;
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-top: 1.2rem;
+}
+
+.footer-input {
+  background: #373737;
+  color: #333;
+  outline: none;
+  border: none;
+  padding: 0 1.5rem;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.input-arrow {
+  color: #fff;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  transition: 0.3s;
+}
+
+.input-arrow:hover {
+  background-color: #00418b;
+}
+
+.focus {
+  background: #fff;
+}
+
+.bottom-footer {
+  margin-top: 5.5rem;
+  padding: 0 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright .text {
+  color: #7b7b7b;
+  font-size: 1.2rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.copyright .text span {
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.followme-wrap {
+  display: flex;
+}
+
+.followme {
+  display: flex;
+  align-items: center;
+}
+
+.followme h3 {
+  color: #7b7b7b;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.followme .footer-line {
+  width: 20px;
+  height: 2px;
+  background-color: #7b7b7b;
+  margin: 0 1.2rem;
+  display: inline-block;
+}
+
+.social-media a {
+  color: #7b7b7b;
+  font-size: 1.3rem;
+  margin-right: 0.4rem;
+  transition: 0.3s;
+}
+
+.social-media a:hover {
+  color: var(--main-color);
+}
+
+.back-btn-wrap {
+  position: relative;
+  margin-left: 2.5rem;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  width: 55px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.back-btn:hover {
+  background-color: #00418b;
+}
+
+.back-btn-wrap:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  border-radius: 50%;
+  opacity: 0.08;
+  animation: scale 1.2s ease-out infinite 1s;
+}
+.split-text {
+  color: var(--main-color);
+}
+
+/* Fin Sección pie de página */
+
