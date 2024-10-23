@@ -17,7 +17,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
   providers: [
-    importProvidersFrom(AppRoutingModule, FormsModule) // Importa las rutas aquí
+    importProvidersFrom(AppRoutingModule, FormsModule, AppModule) // Importa las rutas aquí
   ]
 }).catch(err => console.error(err));
 

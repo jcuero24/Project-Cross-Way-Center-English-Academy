@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './contacto.component.html',
-  styleUrl: './contacto.component.css'
+  styleUrls: ['/src/styles.css'],
 })
 export class ContactoComponent {
 

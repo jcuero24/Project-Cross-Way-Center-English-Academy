@@ -1,0 +1,20 @@
+
+.contact {
+  background: url("../img/contact-bg.svg") center bottom / cover;
+}
+
+.contact-box {
+  background-color: var(--light-one);
+  border-radius: 45px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-input {
+  background: #f3f3f3;
+  border-radius: 4rem;
+}
+
+.contact-input:focus {
+  background: #eaeaea;
+}

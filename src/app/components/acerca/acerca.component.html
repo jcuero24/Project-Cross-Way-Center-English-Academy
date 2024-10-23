@@ -3,6 +3,14 @@
       <div class="section-header">
         <h3 class="title" data-title="Quienes somos">Acerca de</h3>
       </div>
+
+      <div class="gallery">
+        <div *ngFor="let image of images; let i = index" [ngClass]="{'active': i === currentSlide}">
+          <img [src]="image" alt="Gallery Image">
+        </div>
+        <button (click)="prevSlide()">Prev</button>
+        <button (click)="nextSlide()">Next</button>
+      </div>
   
       <div class="section-body grid-2">
         <div class="column-1">
@@ -41,8 +49,55 @@
           </div>
         </div>
         <div class="column-2 image">
-          <img src="./img/shapes/points4.svg" class="points" alt="" />
+          <img src="/src/app/img/shapes/points4.svg" class="points" alt="" />
         </div>
       </div>
     </div>
+    <main>
+      <div class="cards">
+        <div class="card" data-card="Misión">
+          <div class="card-content z-index">
+            <h3 class="title-sm">Misión</h3>
+            <p class="text">
+              Nuestra Misión es proporcionar a los estudiantes las herramientas necesarias para el óptimo aprendizaje del idioma Inglés, que le permita ser utilizado en los diferentes contextos de la vida cotidiana poniendo en práctica las cuatro habilidades básicas del lenguaje (hablar, escuchar, leer y escribir).
+            </p>
+          </div>
+        </div>
+    
+        <div class="card" data-card="vision">
+          <div class="card-content z-index">
+            <img src="" class="icon" alt="" />
+            <h3 class="title-sm">Visión</h3>
+            <p class="text">
+             En el año 2028 nuestra Institución brindará un servicio de Enseñanza de inglés de alta calidad quedando posicionada entre las mejores instituciones del Valle del Cauca y ofertará de manera presencial y virtual en diferentes regiones de Colombia.
+            </p>
+           
+          </div>
+        </div>
+    
+        <div class="card" data-card="Politica">
+          <div class="card-content z-index">
+            <h3 class="title-sm">Política de Calidad</h3>
+            <p class="text">
+             El Instituto de Formación para el Trabajo Cross Way Center, asume por objeto la enseñanza del idioma Inglés, en el ámbito escolar, universitario y de la sociedad en general, proporcionando a sus estudiantes los conocimientos lingüísticos imprescindibles para obtener una mejor formación personal, académica y profesional, que genere la satisfacción completa de sus necesidades, basándose en la mejora continua de los procesos que conforma el Sistema de Gestión de Calidad, teniendo como soporte los valores definidos en la misión, visión y las directrices de la NTC 5555 y 5580.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-card="Objetivos">
+        <div class="card-content z-index">
+          <h3 class="title-sm">Objetivos de Calidad</h3>
+          <p class="text">
+          <p>
+              ~ Diseñar, ejecutar y evaluar planes de formación que permitan el crecimiento integral de los miembros de la comunidad educativa, fortaleciendo las competencias comunicativas de los estudiantes en el idioma Inglés.
+          </p>
+          <p>
+            ~ Consolidar los procesos administrativos, optimizando los recursos para la sostenibilidad económica, que garantice la continuidad de los procesos educativos y con ello el crecimiento de la institución. 
+          </p>
+          <p>
+            ~ Mantener y mejorar continuamente el Sistema de Calidad, orientando las acciones pedagógicas, en la búsqueda de altos niveles de calidad educativa como condición necesaria para el desarrollo de los estudiantes y la transformación del medio local, regional y nacional.
+          </p>
+        </div>
+      </div>
+</main>    
   </section>
