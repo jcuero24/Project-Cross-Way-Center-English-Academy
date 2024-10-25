@@ -74,6 +74,7 @@ ocuparán igualmente el espacio disponible en el contenedor.
   font-size: 1.25rem;
   color: var(--dark-two);
   line-height: 1.6;
+  text-align: justify;
 }
 
 .column-1 {
@@ -199,13 +200,15 @@ header nav{
   background-color: var(--light-one);
   z-index: 50;
   overflow: hidden;
+  padding: 1rem 0;
 }
 
 nav.container{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 5rem;
   align-items: center;
+  justify-content: center; 
 }
 
 .logo a{
@@ -213,21 +216,28 @@ nav.container{
 }
 
 .logo{
-  width: 80px;
   display: flex;
   align-items: center;
-  font-size: 2em;
-  font-weight: 600;
+  font-size: 1.5em; /* Ajustar el tamaño del texto si es necesario */
+  margin-right: 20px; /* Espacio entre el logo y los enlaces */
 }
 
-.logo span{
-  color: var(--main-color);
+.logo img{
+  height: 100px; /* Ajusta la altura del logo */
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.links {
+  display: flex; /* Asegúrate de que el menú sea horizontal */
+  align-items: center; /* Alinear los elementos del menú verticalmente */
 }
 
 .links ul{
   display: flex;
+  list-style: none; /* Eliminar los puntos de la lista */
+  padding: 0; /* Eliminar el padding */
+  margin: 0; /* Eliminar el margin */
 }
-
 .links a {
   display: inline-block;
   padding: 0.9rem 1.2rem;
@@ -284,14 +294,14 @@ color: var(--main-color);
 .cards {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; /*Sirve para que los elementos con display flex ocupen varias lineas*/
+  flex-wrap: wrap; /* Sirve para que los elementos con display flex ocupen varias líneas */
   width: 100%;
 }
 
 .card {
   position: relative;
   width: 100%;
-  max-width: 390px;
+  max-width: 360px;
   min-height: 520px;
   background-color: var(--light-three);
   display: flex;
@@ -327,21 +337,47 @@ color: var(--main-color);
   margin-bottom: 1.7rem;
 }
 
+/* Ajusta el tamaño del título */
 .card .title-sm {
-  line-height: 0.8;
+  font-size: 1rem; /* Ajusta el tamaño a uno más pequeño */
+  line-height: 1.2; /* Mejora el espaciado entre líneas */
+  margin: 0; /* Elimina márgenes */
 }
 
+/* Ajusta el tamaño del texto del párrafo */
 .card .text {
-  font-size: 1.15rem;
-  margin: 1.8rem 0;
+  font-size: 1.15rem; /* Mantén este tamaño o ajústalo si es necesario */
+  margin: 1.8rem 0; /* Espaciado arriba y abajo */
 }
+
+/* Si necesitas hacer que el contenedor de la tarjeta se comporte de forma diferente */
+.card-content {
+  width: 100%; /* Asegúrate de que ocupe el ancho completo */
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos estén en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+}
+
 /* Fin Servicios */
 
 /* Sección de contacto */
 
+.success-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #d4edda; /* Color de fondo verde claro */
+  color: #155724; /* Color de texto verde oscuro */
+  border: 1px solid #c3e6cb; /* Borde verde */
+  border-radius: 0.5rem; /* Bordes redondeados */
+}
+
+
 .contact {
   position: relative;
   width: 100%;
+  margin-top: 6rem; /* Ajusta según sea necesario */
+  padding: 2rem; /* Espaciado interno para el contenido */
 }
 
 .contact:before,
@@ -424,12 +460,12 @@ color: var(--main-color);
 .contact-form .row {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-column-gap: 0.6rem;
 }
 
 .contact-input {
-  padding: 1.2rem 2.1rem;
+  padding: 1.5rem 2.5rem;
   margin: 0.6rem 0;
   border: none;
   outline: none;
@@ -446,7 +482,7 @@ color: var(--main-color);
 
 .contact-input.textarea {
   resize: none;
-  min-height: 280px;
+  min-height: 250px;
   border-radius: 2rem;
 }
 
@@ -575,14 +611,26 @@ color: var(--main-color);
 /* Sección acerca de */ 
 .about {
   overflow: hidden;
+  width: 100%;
 }
-
+/*
 .about img {
   max-width: 600px;
+}
+  */
+
+.about .container {
+  max-width: 1200px; /* Puedes ajustar este valor según tus necesidades */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 0 15px; /* Añade espacio lateral */
 }
 
 .about .text {
   margin-top: 1rem;
+  /*display: block; Asegúrate de que el texto sea un bloque */
+  text-align: justify; /* Justifica el texto */
+  line-height: 1.6; /* Mejora la legibilidad */
+  width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
 }
 
 .skills {
@@ -1486,6 +1534,21 @@ body {
 }
 
 /*anex*/
+
+.video-container {
+  position: relative;
+  display: inline-block;
+}
+
+.points2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Asegura que la imagen esté detrás del video */
+  opacity: 0.5; /* Opcional: ajusta la opacidad si quieres un efecto más sutil */
+}
  
 .home-container {
   display: flex;
@@ -1499,3 +1562,4 @@ body {
 h1, p {
   margin: 0;
 }
+

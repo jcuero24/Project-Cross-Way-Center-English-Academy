@@ -3,31 +3,23 @@
       <div class="section-header">
         <h3 class="title" data-title="Quienes somos">Acerca de</h3>
       </div>
-
-      <div class="gallery">
-        <div *ngFor="let image of images; let i = index" [ngClass]="{'active': i === currentSlide}">
-          <img [src]="image" alt="Gallery Image">
-        </div>
-        <button (click)="prevSlide()">Prev</button>
-        <button (click)="nextSlide()">Next</button>
-      </div>
-  
       <div class="section-body grid-2">
         <div class="column-1">
           <h3 class="title-sm">Cross Way Center</h3>
           <p class="text">
-            Desde su fundación en 1986, Cross Way Center ha sido un pilar en la enseñanza del idioma inglés en Tuluá, Valle. Con licencia de funcionamiento 310-59.1104 emitida por la Secretaría de Educación, nuestra academia se dedica a proporcionar una educación de calidad que capacita a nuestros estudiantes en un idioma globalmente esencial.
-            
-            Ofrecemos un programa de inglés que abarca 12 niveles, permitiendo a los estudiantes avanzar desde lo más básico hasta un dominio fluido del idioma. Cada nivel está diseñado para durar 4 semanas, con clases que se imparten de lunes a jueves o en sesiones de 8 sábados, adaptándose así a las diferentes necesidades y horarios de nuestros alumnos.
-            
+            Desde su fundación en 1986, Cross Way Center ha sido un pilar en la enseñanza del idioma inglés en Tuluá, Valle. Con licencia de funcionamiento 310-59.1104 emitida por la Secretaría de Educación, nuestra academia se dedica a proporcionar una educación de calidad que capacita a nuestros estudiantes en un idioma globalmente esencial. Ofrecemos un programa de inglés que abarca 12 niveles, permitiendo a los estudiantes avanzar desde lo más básico hasta un dominio fluido del idioma. Cada nivel está diseñado para durar 4 semanas, con clases que se imparten de lunes a jueves o en sesiones de 8 sábados, adaptándose así a las diferentes necesidades y horarios de nuestros alumnos.
             En Cross Way Center, valoramos la atención personalizada. Nuestros grupos de clase son reducidos, con un máximo de 12 estudiantes por clase, lo que permite un aprendizaje más efectivo y una interacción constante con los instructores. Disponemos de horarios flexibles en las modalidades diurna, nocturna y de fin de semana, asegurando que todos tengan la oportunidad de aprender en un ambiente cómodo y accesible.
-            
             Además de los cursos regulares, ofrecemos clases personalizadas para aquellos que buscan una atención aún más individualizada. Estas sesiones se pueden coordinar según la disponibilidad del alumno, brindando un enfoque flexible y adaptado a las necesidades específicas de cada estudiante.
-            
             Nos encontramos en una ubicación privilegiada, en el barrio Sajonia, esquina frente al lago Chilicote, lo que facilita el acceso a nuestros servicios. En Cross Way Center, estamos comprometidos con la excelencia educativa y la formación integral de nuestros estudiantes, preparando a la próxima generación de hablantes de inglés para que enfrenten los desafíos del mundo actual.
-            
             ¡Te invitamos a formar parte de nuestra comunidad educativa y a iniciar tu viaje hacia el dominio del inglés con nosotros!
           <div class="skills">
+          <div class="gallery">
+              <div *ngFor="let image of images; let i = index" [ngClass]="{'active': i === currentSlide}">
+                <img [src]="image" alt="Gallery Image">
+              </div>
+              <button (click)="prevSlide()">Prev</button>
+              <button (click)="nextSlide()">Next</button>
+            </div>
             <div class="skill html">
               <h3 class="skill-title">Programa Kids</h3>
               <div class="skill-bar">
@@ -49,7 +41,7 @@
           </div>
         </div>
         <div class="column-2 image">
-          <img src="/src/app/img/shapes/points4.svg" class="points" alt="" />
+          <img src="img/shapes/points4.svg" class="points" alt="" />
         </div>
       </div>
     </div>

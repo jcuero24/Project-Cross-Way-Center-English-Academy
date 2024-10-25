@@ -30,6 +30,11 @@
               {
                 "glob": "**/*",
                 "input": "src/assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/img",
+                "output": "img"
               }
             ],
             "styles": [
@@ -90,7 +95,12 @@
               {
                 "glob": "**/*",
                 "input": "src/assets"
-              }
+              },
+              {
+                "glob": "**/*",
+                "input": "src/img",
+                "output": "img"
+              } 
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",

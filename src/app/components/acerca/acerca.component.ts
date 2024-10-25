@@ -9,13 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: '/src/styles.css',
 })
 export class AcercaComponent {
-  images = [
-    'assets/cross-way-images/in-class-1.jpeg',
-    'assets/cross-way-images/in-class-2.jpeg',
-    'assets/cross-way-images/in-class-3.jpeg',
-    'assets/cross-way-images/sandra-far.jpeg',
-    'assets/cross-way-images/student1.jpeg',
-    'assets/cross-way-images/students-and-teachers.jpeg',
+  images= [
+    'cross-way-images/in-class-1.jpeg',
+    'cross-way-images/in-class-2.jpeg',
+    'cross-way-images/in-class-3.jpeg',
+    'cross-way-images/sandra-far.jpeg',
+    'cross-way-images/student1.jpeg',
+    'cross-way-images/students-and-teachers.jpeg',
   ];
   
   currentSlide = 0;

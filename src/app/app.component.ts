@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ['/src/styles.css'], // Asegúrate de que sea 'styleUrls' en plural
+  styleUrl: '/src/styles.css', // Asegúrate de que sea 'styleUrls' en plural
 })
 export class AppComponent implements AfterViewInit {
   title = 'cross-way-center-academy';
