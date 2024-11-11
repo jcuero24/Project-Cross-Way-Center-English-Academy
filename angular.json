@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/cross-way-center-academy",
+            "outputPath": "dist/cross-way-center-academy/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -29,19 +29,27 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "src/assets"
+                "input": "src/assets",
+                "output": "assets"
               },
               {
                 "glob": "**/*",
-                "input": "src/img",
+                "input": "src/assets/img",
                 "output": "img"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/cross-way-images",
+                "output": "cross-way-images"
               }
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.css"
+              "src/assets/css/main.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -57,7 +65,12 @@
                   "maximumError": "40kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": {
+                "styles": {
+                  "inlineCritical": false
+                }
+              }
             },
             "development": {
               "optimization": false,
@@ -94,20 +107,27 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "src/assets"
+                "input": "src/assets",
+                "output": "assets"
               },
               {
                 "glob": "**/*",
-                "input": "src/img",
+                "input": "src/assets/img",
                 "output": "img"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/cross-way-images",
+                "output": "cross-way-images"
               } 
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-                "src/styles.css"
-       
+              "src/assets/css/main.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/main.js"
+            ]
           }
         }
       }

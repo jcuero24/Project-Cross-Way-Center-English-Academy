@@ -1,71 +1,594 @@
-<header>
-  <nav>
-    <div class="container">
-      <div class="logo">
-        <a href="/">
-          <img src="img/logo cwc.png" alt="Cross Way Center" />
-          </a>
-      </div>
+  <!-- =======================================================
+  * Template Name: Bootslander
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 
-      <div class="links">
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="#" class="logo d-flex align-items-center">
+            <!--   <img src="assets/img/cross-way-images/logo-with-license.jpeg" alt="" style="width: 250px; height: 2000px;"> -->
+      <h1 class="sitename">C W C</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/servicios">Servicios</a></li>
-          <li><a href="/profesores">Profesores</a></li>
-          <li><a href="/acerca">Acerca de</a></li>
-          <li><a href="/testimonios">Testimonios</a></li>
-          <li><a href="/contacto">Contacto</a></li>
-          <li>
-            <a
-              href="https://wa.me/+573173798422"
-              class="active"
-              target="_blank"
-              >Whatsapp</a
-            >
-          </li>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#about">Acerca de</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#gallery">Galería</a></li>
+          <li><a href="#testimonials">Testimonios</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
-      </div>
-      <div class="hamburger-menu">
-        <i class="fas fa-bars fa-lg"></i>
-      </div>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
     </div>
-  </nav>
-   
-   
-  <!-- Contenido principal -->
+  </header>
 
+  <main class="main">
 
-<!-- Componente que representa a la sección actual -->
-<router-outlet></router-outlet>
-    
-    
-  <!-- Pie de página -->
-<!-- <footer class="footer">--> 
-  <!-- <footer class="footer"> --> 
-        <div class="bottom-footer">
-          <div class="copyright">
-            <p class="text">
-              Copyright&copy;2024 | Cross Way Center. Todos los derechos reservados.
-            </p>
+    <!-- Home Section -->
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/hero-bg-2.jpg" alt="" class="hero-bg">
+
+      <div class="container">
+        <div class="row gy-4 justify-content-between">
+          <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
+          <img src="assets/img/cross-way-images/logo-with-license.jpeg" class="img-fluid animated" alt="" >
           </div>
 
-          <div class="followme-wrap">
-            <div class="followme">
-              <h3>Síguenos</h3>
-              <span class="footer-line"></span>
-              <div class="social-media">
-                <a href="https://www.facebook.com/CrossWayCenter.Co">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/cross_way_center?igsh=MTI0d3Zjdzk5MjNhNQ==">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </div>
+          <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
+            <h1>Bienvenido a </h1>
+            <h1><span>Cross Way Center</span></h1>
+            <p>"El Inglés te Abre las Puertas al Mundo".</p>
+            <div class="d-flex">
+              <a href="#about" class="btn-get-started">Empecémos!</a>
+              <a href="https://youtu.be/3uqa2l1IPgA?si=rxMNowvTASYIZRLm" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Mirar Video</span></a>
             </div>
-            <div class="back-btn-wrap">
-              <a href="#" id="back-to-top" class="back-btn">
-                  <i class="fas fa-chevron-up"></i>
+          </div>
+
+        </div>
+      </div>
+
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9"></use>
+        </g>
+      </svg>
+
+    </section><!-- /Home Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-xl-center gy-5">
+
+          <div class="col-xl-5 content">
+            <h3>Sobre nosotros</h3>
+            <h2>Cross Way Center</h2>
+            <p> Desde su fundación en 1986, Cross Way Center ha sido un pilar en la enseñanza del idioma inglés en Tuluá, Valle. Con licencia de funcionamiento 310-59.1104 emitida por la Secretaría de Educación, nuestra academia se dedica a proporcionar una educación de calidad que capacita a nuestros estudiantes en un idioma globalmente esencial. ¡Te invitamos a formar parte de nuestra comunidad educativa y a iniciar tu viaje hacia el dominio del inglés con nosotros!</p>
+            <a href="#contact" class="read-more"><span>Saber más</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-xl-7">
+            <div class="row gy-4 icon-boxes">
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box">
+                  <i class="bi bi-buildings"></i>
+                  <h3>Misión</h3>
+                  <p>Nuestra misión es brindar a los estudiantes las herramientas para un óptimo aprendizaje del inglés, aplicando las cuatro habilidades básicas: hablar, escuchar, leer y escribir en diversos contextos de la vida cotidiana.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-clipboard-pulse"></i>
+                  <h3>Visión</h3>
+                  <p>En el año 2030, nuestra institución ofrecerá enseñanza de inglés de alta calidad, posicionándose entre las mejores del Valle del Cauca, con modalidad presencial y virtual en distintas regiones de Colombia.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-command"></i>
+                  <h3>Política de Calidad</h3>
+                  <p>El Instituto de Formación para el Trabajo Cross Way Center tiene como objetivo enseñar inglés en el ámbito escolar, universitario y social, brindando a los estudiantes conocimientos lingüísticos clave para su desarrollo personal, académico y profesional. Se enfoca en satisfacer sus necesidades mediante la mejora continua del Sistema de Gestión de Calidad, fundamentado en los valores de su misión y visión y en las normas NTC 5555 y 5580.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <h3>Objetivos de Calidad</h3>
+                  <p>Diseñar, ejecutar y evaluar planes de formación que promuevan el crecimiento integral de la comunidad educativa, fortaleciendo las competencias comunicativas en inglés. Consolidar procesos administrativos y optimizar recursos para la sostenibilidad económica, asegurando la continuidad de los procesos educativos y el crecimiento institucional. Mantener y mejorar continuamente el Sistema de Calidad, orientando las acciones pedagógicas hacia altos niveles de calidad educativa para el desarrollo de los estudiantes y la transformación del entorno local, regional y nacional.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-emoji-smile"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="780" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Estudiantes Satisfechos</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-journal-richtext"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Ofertas Académicas</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-headset"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="38" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Años de Experiencia</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-people"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="375" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Horas de Estudio Aproximadas al Año</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="details section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Servicios</h2>
+        <div><span></span> <span class="description-title">Servicios y Detalles</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <img src="assets/img/details-1.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+            <h3>Curso de inglés para niños (Kids)</h3>
+            <p class="fst-italic">
+              Orientado a estudiantes jóvenes para introducirlos al inglés de forma divertida y efectiva.
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i><span>Consta de 6 niveles que llevan a un nivel A1-A2 del MCER.</span></li>
+              <li><i class="bi bi-check"></i><span>Desarrollo de las cuatro habilidades: hablar, escuchar, leer y escribir.</span></li>
+              <li><i class="bi bi-check"></i><span>Actividades lúdicas y educativas que fomentan el interés y la motivación.</span></li>
+            </ul>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/details-2.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+            <h3>Programa Basico para Adultos</h3>
+            <p class="fst-italic">
+                Diseñado para adultos que inician su aprendizaje de inglés o buscan mejorar sus habilidades desde un nivel principiante.
+              </p>
+              <ul>
+                <li><i class="bi bi-check"></i><span>Programa con 12 niveles, desde A1 hasta B1 del MCER.</span></li>
+                <li><i class="bi bi-check"></i><span>Desarrollo de competencias para comunicarse en situaciones cotidianas y profesionales.</span></li>
+                <li><i class="bi bi-check"></i><span>Estructura gradual y sistemática para consolidar conocimientos y avanzar con confianza.</span></li>
+              </ul>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+            <img src="assets/img/details-3.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up">
+            <h3>Curso Avanzado para Adultos</h3>
+           <p>Para estudiantes con una base sólida que desean perfeccionar sus habilidades y lograr un dominio avanzado del inglés.
+          </p>
+          <ul>
+            <li><i class="bi bi-check"></i><span>Curso de 8 niveles, alcanzando niveles B2 o C1 del MCER.</span></li>
+            <li><i class="bi bi-check"></i><span>Enfoque en el uso avanzado del idioma en contextos académicos, laborales y sociales.</span></li>
+            <li><i class="bi bi-check"></i><span>Énfasis en fluidez, precisión gramatical y capacidad para debatir temas complejos.</span></li>
+          </ul>
+          </div>
+        </div><!-- Features Item -->
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Galería</h2>
+        <div><span></span> <span class="description-title"> Galería de Fotos</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/cross-way-images/in-class-1.jpeg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/cross-way-images/in-class-1.jpeg" alt="" width="300" height="200" class="img-fluid">
               </a>
-          </div>          
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/cross-way-images/in-class-2.jpeg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/cross-way-images/in-class-2.jpeg" alt="" width="300" height="200" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/cross-way-images/teacher-jp1.jpeg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/cross-way-images/teacher-jp1.jpeg" alt="" width="300" height="200" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/cross-way-images/student1.jpeg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/cross-way-images/student1.jpeg" alt="" width="300" height="200" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/cross-way-images/jp-new.jpeg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/cross-way-images/jp-new.jpeg" alt="" width="300" height="200" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/cross-way-images/kids.jpeg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/cross-way-images/kids.jpeg" alt="" width="300" height="200" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/cross-way-images/teacher-juanc.jpeg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/cross-way-images/teacher-juanc.jpeg" alt="" width="300" height="200" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/cross-way-images/jd2.jpeg " class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/cross-way-images/jd2.jpeg" alt=""  width="300" height="200"class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+  
+   <!-- Testimonials Section -->
+   <section id="testimonials" class="testimonials section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Testimonios</h2>
+      <div><span></span> <span class="description-title"> ¿Qué dicen de nosotros? </span></div>
+    </div><!-- End Section Title -->
+    <div class="container">
+      <div class="testimonial .row">
+        <div class="testimonial .col-12" *ngFor="let testimonial of testimonials">
+          <div class="testimonial-card">
+            <img [src]="testimonial.img" class="testimonial-img" alt="{{ testimonial.name }}">
+            <div class="testimonial-content">
+              <h3>{{ testimonial.name }}</h3>
+              <h4>{{ testimonial.title }}</h4>
+              <div class="testimonial-rating">★★★★★</div>
+              <p>{{ testimonial.review }}</p>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  
+ <!-- Testimonials Section -->
+
+
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Equipo</h2>
+        <div><span>Nuestro</span> <span class="description-title"> Equipo</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="pic"><img src="assets/img/cross-way-images/principal.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Juan Pablo Cuero</h4>
+                <span>Director</span>
+                <div class="social">
+                  <a href="https://www.facebook.com/CrossWayCenter.Co"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/cross_way_center?igsh=MTI0d3Zjdzk5MjNhNQ=="><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="pic"><img src="assets/img/cross-way-images/teacher-l.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Luis Alberto Gallego</h4>
+                <span>Coordinador Académico</span>
+                <div class="social">
+                  <a href="https://www.facebook.com/CrossWayCenter.Co"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/cross_way_center?igsh=MTI0d3Zjdzk5MjNhNQ=="><i class="bi bi-instagram"></i></a>
+                
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="pic"><img src="assets/img/cross-way-images/sandra-near.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Sandra Monroe</h4>
+                <span>Secretaria</span>
+                <div class="social">
+                  <a href="https://www.facebook.com/CrossWayCenter.Co"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/cross_way_center?igsh=MTI0d3Zjdzk5MjNhNQ=="><i class="bi bi-instagram"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+ <!-- Faq Section -->
+<section id="faq" class="faq section light-background">
+
+  <div class="container-fluid">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+
+        <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+          <h3><span>Preguntas Frecuentes </span><strong>(FAQ)</strong></h3>
+          <p>
+            Aquí respondemos algunas de las preguntas más comunes sobre nuestros cursos y servicios en Cross Way Center. Si tienes alguna otra consulta, no dudes en contactarnos.
+          </p>
+        </div>
+
+        <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+
+          <div *ngFor="let item of faqs" class="faq-item" [ngClass]="{'faq-active': item.active}">
+            <i class="faq-icon bi bi-question-circle"></i>
+            <h3 (click)="toggleFAQ(item)">{{ item.question }}</h3>
+            <div class="faq-content" *ngIf="item.active">
+              <p>{{ item.answer }}</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right" (click)="toggleFAQ(item)"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-5 order-1 order-lg-2">
+        <img src="assets/img/faq.jpg" class="img-fluid" alt="Preguntas Frecuentes" data-aos="zoom-in" data-aos-delay="100">
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Faq Section -->
+
+
+  <!-- Contact Section -->
+<section id="contact" class="contact section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contacto</h2>
+    <div><span></span> <span class="description-title"> Contáctanos</span></div>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade" data-aos-delay="100">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+          <i class="bi bi-geo-alt flex-shrink-0"></i>
+          <div>
+            <h3>Dirección</h3>
+            <p>Calle 34 #20-41, Tuluá, TLÁ 763022</p>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-telephone flex-shrink-0"></i>
+          <div>
+            <h3>Llámanos</h3>
+            <p>+57 317 379 8422</p>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-envelope flex-shrink-0"></i>
+          <div>
+            <h3>Envíanos un Correo</h3>
+            <p>crosswaycentertulua&#64;gmail.com</p>
+          </div>
+        </div><!-- End Info Item -->
+      </div>
+
+      <div class="col-lg-8">
+        <form class="php-email-form" (ngSubmit)="onSubmit()" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Nombre Completo" [(ngModel)]="contactForm.nombre" name="nombre" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="Correo" [(ngModel)]="contactForm.email" name="email" required>
+            </div>
+            <div class="col-md-12">
+              <input type="text" class="form-control" placeholder="Asunto" [(ngModel)]="contactForm.asunto" name="asunto" required>
+            </div>
+            <div class="col-md-12">
+              <textarea class="form-control" rows="6" placeholder="Mensaje" [(ngModel)]="contactForm.mensaje" name="mensaje" required></textarea>
+            </div>
+            <div class="col-md-12 text-center">
+              <div *ngIf="loading" class="loading">Cargando...</div>
+              <div *ngIf="successMessage" class="sent-message">{{ successMessage }}</div>
+              <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+              <button type="submit">Enviar Contacto</button>
+            </div>
+          </div>
+        </form>
+      </div><!-- End Contact Form -->
+    </div>
+  </div>
+</section><!-- /Contact Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="#" class="logo d-flex align-items-center">
+            <span class="sitename">C W C</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Calle 34 #20-41</p>
+            <p>Tuluá, TLÁ 763022</p>
+            <p class="mt-3"><strong>Celular:</strong> <span> +57 317 379 8422</span></p>
+            <p><strong>Email:</strong> <span> crosswaycentertulua&#64;gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.facebook.com/CrossWayCenter.Co"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/cross_way_center?igsh=MTI0d3Zjdzk5MjNhNQ=="><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#testimonials">Testimonios</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li>
+              <a
+                href="https://wa.me/+573173798422"
+                target="_blank"
+                >Whatsapp</a
+              >
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Cross Way Center</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+      <a> Designed by Juan D. Cuero
+      </a>  
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
