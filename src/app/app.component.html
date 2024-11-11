@@ -507,7 +507,7 @@
               <div *ngIf="loading" class="loading">Cargando...</div>
               <div *ngIf="successMessage" class="sent-message">{{ successMessage }}</div>
               <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-              <button type="submit">Enviar Contacto</button>
+              <button type="submit" [disabled]="loading">Enviar Contacto</button>
             </div>
           </div>
         </form>
@@ -580,14 +580,7 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+  
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>

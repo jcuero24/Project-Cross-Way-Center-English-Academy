@@ -46,22 +46,19 @@ export class AppComponent {
       active: false,
     },
   ];
-
   contactForm = {
     nombre: '',
     email: '',
     asunto: '',
     mensaje: '',
   };
-
+  loading: boolean = false;
   successMessage: string = '';
   errorMessage: string = '';
-  loading: boolean = false;
 
   constructor() {
-    emailjs.init('2MUowbrWGE4htzLLK'); // Cambia 'YOUR_USER_ID' por tu User ID de EmailJS
+    emailjs.init('2MUowbrWGE4htzLLK'); // Inicializa EmailJS con tu User ID
   }
- 
 
   toggleFAQ(item: any) {
     item.active = !item.active; // Cambia el estado activo de la pregunta
@@ -78,8 +75,7 @@ export class AppComponent {
     .then(
       (response) => {
         console.log('Formulario enviado con éxito!', response.status, response.text);
-        this.successMessage = 'Formulario enviado con éxito';
-        this.errorMessage = ''; // Limpiar mensaje de error
+        alert('Formulario enviado con éxito'); // Mensaje de éxito con alert
         this.loading = false; // Ocultar loading
         // Limpiar el formulario
         this.contactForm = {
@@ -91,8 +87,7 @@ export class AppComponent {
       },
       (error) => {
         console.log('Error al enviar el formulario', error);
-        this.errorMessage = 'Error al enviar el formulario'; // Mensaje de error
-        this.successMessage = ''; // Limpiar mensaje de éxito
+        alert('Error al enviar el formulario'); // Mensaje de error con alert
         this.loading = false; // Ocultar loading
       }
     );

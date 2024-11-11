@@ -30,7 +30,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-color: #0515f3;  /* The default color of the main navmenu links */
   --nav-hover-color: #ff0000; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
 }
@@ -38,15 +38,15 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #414141;
+  --background-color: #929191;
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #414141;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #414141;
+  --background-color: #929191;
+  --default-color: white;
+  --heading-color: blue;
+  --surface-color: #777777;
   --contrast-color: #ffffff;
 }
 
@@ -141,7 +141,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgb(77, 77, 77);
+  --background-color: rgb(155, 155, 155);
   --default-color: #1005b3;
   --heading-color: blue;
   color: var(--default-color);
@@ -168,7 +168,7 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0 18px rgb(155, 155, 155);
 }
 
 /* Global Header on Scroll
@@ -209,7 +209,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: white;
+    color: blue;
     font-size: 15px;
     padding: 0 2px;
     font-family: var(--nav-font);
@@ -557,7 +557,6 @@ h6 {
   margin-top: 6px;
   font-size: 13px;
 }
-
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -673,7 +672,7 @@ h6 {
 }
 
 .page-title nav ol li+li::before {
-  content: "/";
+  content: "#";
   display: inline-block;
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
@@ -787,7 +786,7 @@ section,
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 0%);
+  color: color-mix(in srgb, var(blue), transparent 0%);
   margin: 5px 0 30px 0;
   font-size: 22px;
   font-weight: 400;
@@ -849,6 +848,7 @@ section,
   }
 
   .hero p {
+    color: blue;
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;

@@ -8,21 +8,11 @@
     ],
     "rewrites": [
       {
-        "source": "/cross-way-images/**",
-        "destination": "/cross-way-images"
-      },
-      {
-        "source": "/img/**",
-        "destination": "/img"
-      },
-      {
         "source": "**",
         "destination": "/index.html"
       }
     ]
   }
 }
-
-
-  
+ 
  
